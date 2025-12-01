@@ -1,4 +1,4 @@
-package com.util.dayone;
+package com.util.arraysandhashing;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package com.util.dayone;
+package com.util.arraysandhashing;
 
 public class MaximumProductSubarrayOneFiveTwo {
 
@@ -19,7 +19,23 @@ public class MaximumProductSubarrayOneFiveTwo {
 	private static int calculateOptimum(int[] nums) {
 		// TODO Auto-generated method stub
 		
-		return 0;
+		int n=nums.length;
+		int product=1;
+		int ans=nums[0];
+		int leftProduct=1;
+		int rightProduct=1;
+		for(int i=1;i<n;i++) {
+			
+			leftProduct=(leftProduct==0?1:leftProduct);
+			rightProduct=(rightProduct==0?1:rightProduct);
+			
+			leftProduct=leftProduct*nums[i];
+			rightProduct=rightProduct*nums[n-1-i];
+			
+			ans=Math.max(ans, Math.max(rightProduct, leftProduct));
+			
+		}
+		return ans;
 	}
 
 	private static int calculateBrut(int[] nums) {

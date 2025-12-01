@@ -1,4 +1,4 @@
-package com.util.dayone;
+package com.util.arraysandhashing;
 
 /*
  * USE KADANE approach gujarathi analogy taken from one youtube channel
